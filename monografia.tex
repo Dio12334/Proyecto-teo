@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+
+\title{Monografia}
+\author{Diego Paredes}
+\maketitle
+
+\tableofcontents
+
+\section{Estructura de la clase AFD}
+
+\lstset{language=C++}
+\begin{lstlisting}
+class AFD{
+  public:
+      AFD(int estados, int estado_inicial, std::set<int> estados_finales);
+      ~AFD();
+      void insertar_transicion(int estado_partida, int estado_llegada, bool transicion);
+      void print_afd();
+      void brzozowksi();
+      void equivalentes();
+  private:
+      std::vector<std::vector<std::pair<int, bool>>> afd;
+      int estado_inicial;
+      std::set<int> estados_finales;
+      std::vector<std::vector<bool>> equivalencia;
+      
+      bool secheck(int p, int q);
+      bool check(int p, int q);
+};
+
+\end{lstlisting}
+
+\section{Pregunta 1}
+\subsection{Introducción}
+\subsection{Pseudocódigo}
+\subsection{Código}
+\subsection{Experimentación numérica}
+
+\section{Pregunta 2}
+\subsection{Introducción}
+\subsection{Pseudocódigo}
+\subsection{Código}
+\subsection{Experimentación numérica}
+
+
+\section{Pregunta 3}
+\subsection{Introducción}
+\subsection{Pseudocódigo}
+\subsection{Código}
+\subsection{Experimentación numérica}
+
+\section{Pregunta 4}
+\subsection{Introducción}
+\subsection{Pseudocódigo}
+\subsection{Código}
+\subsection{Experimentación numérica}
+
+\section{Pregunta 5}
+\subsection{Introducción}
+\subsection{Pseudocódigo}
+\subsection{Código}
+\subsection{Experimentación numérica}
+
+\end{document}
